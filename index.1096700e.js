@@ -1,2 +1,0 @@
-var e={fetchCountries:function(e){return fetch("https://restcountries.com/v2/name/{name}").then((e=>e.json()))}};const n=document.querySelector("#search-box"),t=(document.querySelector(".country-list"),document.querySelector(".country-info"));n.addEventListener("input",(function(t){t.preventDefault();const c=t.currentTarget;console.log(c.elements);const r=n.value.trim();e.fetchCountries(r).then(o).catch((e=>console.log(e)))}));function o(e){const n=`<div>\n<h1>${fetchCountries(name)}</h1>\n</div>`;console.log(n),t.innerHTML=n}
-//# sourceMappingURL=index.1096700e.js.map
