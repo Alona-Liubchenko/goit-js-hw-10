@@ -7,7 +7,11 @@ const inputEl = document.querySelector('#search-box');
 const ulEl = document.querySelector('.country-list');
 const divEl = document.querySelector('.country-info');
 const DEBOUNCE_DELAY = 300;
+
 inputEl.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY));
+
+inputEl.insertAdjacentHTML('beforebegin', '<h1>Country Finder</h1>');
+inputEl.placeholder = 'Search for any country...';
 
 function onSearch(e) {
   e.preventDefault();
@@ -62,5 +66,3 @@ function onFetchError(error) {
   clearItem(ulEl);
   clearItem(divEl);
 }
-inputEl.insertAdjacentHTML('beforebegin', '<h1>Country Finder</h1>');
-document.querySelector('#search-box').placeholder = 'Search for any country...';
