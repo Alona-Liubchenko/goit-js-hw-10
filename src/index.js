@@ -11,7 +11,7 @@ const DEBOUNCE_DELAY = 300;
 inputEl.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY));
 
 inputEl.insertAdjacentHTML('beforebegin', '<h1>Country Finder</h1>');
-inputEl.placeholder = 'Search for any country...';
+inputEl.placeholder = 'country name';
 
 function onSearch(e) {
   e.preventDefault();
